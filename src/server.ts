@@ -1,4 +1,5 @@
 import express, { Request, Response, NextFunction } from 'express';
+import './database';
 import { MainRouterUsers } from './routes';
 
 const app = express();
