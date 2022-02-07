@@ -1,8 +1,12 @@
-import express, { Request, Response, NextFunction } from "express";
+import express, { Request, Response, NextFunction } from 'express';
+import { MainRouterUsers } from './routes';
 
 const app = express();
 
 app.use(express.json()); // trabalhar com json
+
+//rotas da aplicação
+app.use(MainRouterUsers);
 
 // funtion capturando os erros da aplicação.
 app.use(
@@ -15,12 +19,12 @@ app.use(
     }
     // caso tenha error com servidor
     return response.status(500).json({
-      status: "error",
-      messeger: "Error Internal Server Error",
+      status: 'error',
+      messeger: 'Error Internal Server Error',
     });
-  }
+  },
 );
 
 app.listen(3333, () =>
-  console.log("Start is running! https://localhost:3333 🤡")
+  console.log('Start is running! http://localhost:3333 🤡'),
 ); // setup server...
