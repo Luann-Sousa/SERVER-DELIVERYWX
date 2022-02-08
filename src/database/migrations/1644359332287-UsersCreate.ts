@@ -42,7 +42,10 @@ export class UsersCreate1644359332287 implements MigrationInterface {
             name: 'phone',
             type: 'numeric',
           },
-
+          {
+            name: 'file',
+            type: 'varchar',
+          },
           {
             name: 'nivel_user',
             type: 'uuid',
