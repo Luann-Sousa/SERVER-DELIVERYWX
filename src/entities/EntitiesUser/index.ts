@@ -5,11 +5,12 @@ import {
   CreateDateColumn,
   UpdateDateColumn,
 } from 'typeorm';
+import { v4 as uuidV4 } from 'uuid';
 
 @Entity()
 class EntitiesUser {
   @PrimaryColumn()
-  id: number;
+  id: string;
 
   @Column()
   name: string;
@@ -38,12 +39,12 @@ class EntitiesUser {
   @UpdateDateColumn()
   updated_at: Date;
 
-  // //caso não tenha id crie um
-  // constructor() {
-  //   if (!this.id) {
-  //     this.id = uuidV4();
-  //   }
-  // }
+  //caso não tenha id crie um
+  constructor() {
+    if (!this.id) {
+      this.id = uuidV4();
+    }
+  }
 }
 
 export { EntitiesUser };
