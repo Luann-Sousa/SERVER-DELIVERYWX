@@ -1,68 +1,64 @@
 import { MigrationInterface, QueryRunner, Table } from 'typeorm';
 
-export class UsersCreate1644359332287 implements MigrationInterface {
+export class UsersCreate1644379408372 implements MigrationInterface {
   public async up(queryRunner: QueryRunner): Promise<void> {
-    return await queryRunner.createTable(
+    await queryRunner.createTable(
       new Table({
         name: 'users',
         columns: [
           {
             name: 'id',
             type: 'uuid',
-            isPrimary: true, // chave primaria
-            isGenerated: true, //gerar automaticamente
+            isPrimary: true,
+            isGenerated: true,
           },
-
           {
             name: 'name',
             type: 'varchar',
           },
-
           {
             name: 'username',
-            type: 'string',
+            type: 'varchar',
           },
-
           {
             name: 'email',
             type: 'varchar',
+            isUnique: true,
           },
-
           {
             name: 'password',
             type: 'varchar',
           },
-
           {
             name: 'cpf',
             type: 'varchar',
           },
-
           {
             name: 'phone',
-            type: 'numeric',
+            type: 'varchar',
           },
           {
             name: 'file',
             type: 'varchar',
           },
           {
-            name: 'date_nasc',
-            type: 'timestamp',
-          },
-          {
             name: 'nivel_user',
-            type: 'uuid',
+            type: 'numeric',
           },
           {
-            name: 'created_at',
-            type: 'timestamp',
+            name: 'date_nasc',
+            type: 'timestap',
             default: 'now()',
           },
 
           {
+            name: 'created_at',
+            type: 'timestap',
+            default: 'now()',
+          },
+          {
             name: 'updated_at',
-            type: 'timestamp',
+            type: 'timestap',
             default: 'now()',
           },
         ],
@@ -72,8 +68,6 @@ export class UsersCreate1644359332287 implements MigrationInterface {
             columnNames: ['nivel_user'],
             referencedTableName: 'nivel_user',
             referencedColumnNames: ['id'],
-            onDelete: 'CASCADE',
-            onUpdate: 'CASCADE',
           },
         ],
       }),

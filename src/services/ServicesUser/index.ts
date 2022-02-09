@@ -1,7 +1,7 @@
 import { getCustomRepository } from 'typeorm';
-import { UserRepository } from '../../repositories/RepositoriesUser';
+import { UserRepositorie } from '../../repositories/RepositoriesUser';
 
-interface IUserServices {
+interface IUserProps {
   name: string;
   username: string;
   email: string;
@@ -9,10 +9,11 @@ interface IUserServices {
   cpf: string;
   phone: string;
   file: string;
+  nivel_user: number;
   date_nasc: string;
 }
 
-class UserServices {
+class CreateUserService {
   async execute({
     name,
     username,
@@ -21,18 +22,20 @@ class UserServices {
     cpf,
     phone,
     file,
+    nivel_user,
     date_nasc,
-  }: IUserServices) {
-    const userRepository = getCustomRepository(UserRepository);
+  }: IUserProps) {
+    const useReposotry = getCustomRepository(UserRepositorie);
 
-    const userEmailAllexists = await userRepository.findOne({
+    const useremailAllexists = await useReposotry.findOne({
       email,
     });
 
-    if (userEmailAllexists) {
-      throw new Error('Email já possui em nossa sistema !');
+    if (useremailAllexists) {
+      throw new Error('Já possui um usuário com este email tente outro !');
     }
-    const createUser = userRepository.create({
+
+    const user = useReposotry.create({
       name,
       username,
       email,
@@ -40,13 +43,14 @@ class UserServices {
       cpf,
       phone,
       file,
+      nivel_user,
       date_nasc,
     });
 
-    await userRepository.save(createUser);
+    await useReposotry.save(user);
 
-    return { createUser };
+    return user;
   }
 }
 
-export { UserServices };
+export { CreateUserService };

@@ -1,9 +1,9 @@
 import express from 'express';
 import { UserCreateControler } from '../../controllers/ControllersUser';
 
-const Router = express.Router();
-
 const createUser = new UserCreateControler(); //criação de um usuário
+
+const Router = express.Router();
 
 Router.post('/users', createUser.handle);
 

@@ -7,8 +7,8 @@ import {
 } from 'typeorm';
 import { v4 as uuidV4 } from 'uuid';
 
-@Entity()
-class EntitiesUser {
+@Entity('users')
+class User {
   @PrimaryColumn()
   id: string;
 
@@ -34,7 +34,10 @@ class EntitiesUser {
   file: string;
 
   @Column()
-  date_nasc: Date;
+  nivel_user: number;
+
+  @Column()
+  date_nasc: string;
 
   @CreateDateColumn()
   created_at: Date;
@@ -42,7 +45,6 @@ class EntitiesUser {
   @UpdateDateColumn()
   updated_at: Date;
 
-  //caso não tenha id crie um
   constructor() {
     if (!this.id) {
       this.id = uuidV4();
@@ -50,4 +52,4 @@ class EntitiesUser {
   }
 }
 
-export { EntitiesUser };
+export { User };
