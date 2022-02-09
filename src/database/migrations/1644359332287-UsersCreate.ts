@@ -47,6 +47,10 @@ export class UsersCreate1644359332287 implements MigrationInterface {
             type: 'varchar',
           },
           {
+            name: 'date_nasc',
+            type: 'timestamp',
+          },
+          {
             name: 'nivel_user',
             type: 'uuid',
           },

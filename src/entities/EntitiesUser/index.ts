@@ -33,6 +33,9 @@ class EntitiesUser {
   @Column()
   file: string;
 
+  @Column()
+  data_nasc: Date;
+
   @CreateDateColumn()
   created_at: Date;
 
