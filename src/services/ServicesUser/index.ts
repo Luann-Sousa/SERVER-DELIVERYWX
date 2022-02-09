@@ -13,7 +13,7 @@ interface IUserServices {
 }
 
 class UserServices {
-  async handle({
+  async execute({
     name,
     username,
     email,
