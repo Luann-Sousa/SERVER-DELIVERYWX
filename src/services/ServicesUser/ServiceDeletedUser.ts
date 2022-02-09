@@ -6,12 +6,13 @@ class DeletedUserService {
     const userRepositry = getCustomRepository(UserRepositorie);
 
     const userExits = await userRepositry.findOne(id);
-    console.log(userExits);
+    // console.log(userExits);
     if (!userExits) {
       throw new Error(
         'Não possui esse usuário em nosso sistema tente mais tarde!',
       );
     }
+
     return await userRepositry.delete(id);
   }
 }
