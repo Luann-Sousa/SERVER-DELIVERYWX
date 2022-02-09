@@ -34,7 +34,7 @@ class EntitiesUser {
   file: string;
 
   @Column()
-  data_nasc: Date;
+  date_nasc: Date;
 
   @CreateDateColumn()
   created_at: Date;
