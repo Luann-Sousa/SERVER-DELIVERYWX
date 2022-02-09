@@ -7,6 +7,12 @@ class GetAllUsersService {
 
     const requests = await usersRepositorie.find();
 
+    if (!requests) {
+      throw new Error(
+        'Não exite  usuário nenhum usuário cadastrado no sistema, tente mais tarde !',
+      );
+    }
+
     return requests;
   }
 }
