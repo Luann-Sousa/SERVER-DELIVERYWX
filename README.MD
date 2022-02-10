@@ -55,7 +55,6 @@ Para banco de dados, foi utilizado o **Mysql** para armazenar os dados que envol
 
 ### Ferramentas, Técnicas e Bibliotecas da API:
 
-- [x] Utilização dos Princípios do SOLID;
 - [x] Aplicação da metodologia MVC (Model-View-Controller);
 - [x] Utilização do [typescript](https://github.com/microsoft/tsyringe) fazer tipagem em noso código.
 - [x] Utilizado o [mailtrap](https://mailtrap.io/) para testar o envio de e-mails em ambiente de testes;
