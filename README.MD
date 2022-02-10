@@ -13,7 +13,7 @@ O **DeliveryWX** é uma plataforma WEB e MOBILE para comprar de qualquer tipo de
 A API do **DeliveryWX** irá servir os daods para a plataforma WEB e Mobile disponível para Android.
 </br></br>
 
-### Importar rotas da aplicação:
+### Importar Rotas da Aplicação:
 
 Todas as rotas foram testadas utilizando o [Insomnia](https://insomnia.rest/download/). Para importar as rotas testadas para o Insomnia clique no botão:
 
@@ -49,7 +49,7 @@ Todas as rotas foram testadas utilizando o [Insomnia](https://insomnia.rest/down
 - [x] Usuário quando seu pedido estiver a caminho ele poderá está fazendo uma ligação para o motoboy ou estabelecimento;
 - [x] Usuário poderá está fazendo seu cadastro no serividor;
 
-### Banco de Dados e estratégias de armazenamento:
+### Banco de Dados e Estratégias de Armazenamento:
 
 Para banco de dados, foi utilizado o **Mysql** para armazenar os dados que envolvem relacionamentos da regra de negócio da aplicação.
 
@@ -60,7 +60,7 @@ Para banco de dados, foi utilizado o **Mysql** para armazenar os dados que envol
 - [x] Utilização do [typescript](https://github.com/microsoft/tsyringe) para automatizar a injeção de dependência.
 - [x] Utilizado o [mailtrap](https://mailtrap.io/) para testar o envio de e-mails em ambiente de testes;
 
-## 👨🏻‍💻 Run Locally <br/>
+## 👨🏻‍💻 Roda Projeto em Sua Máquina:
 
 - Clone the project
 
