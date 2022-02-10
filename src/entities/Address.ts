@@ -31,7 +31,7 @@ class Address {
   street: string;
 
   @Column()
-  numeber: string;
+  number: number;
 
   @Column()
   complement: string;
