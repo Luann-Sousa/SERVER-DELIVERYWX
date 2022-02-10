@@ -11,6 +11,6 @@ const getAllAddresUsers = new GetAlllAddressUsersController(); //buscar por ende
 
 RouterAddres.post('/address', createAddres.handle);
 RouterAddres.get('/address', getAllAddress.handle);
-RouterAddres.get('/address', getAllAddresUsers.handle);
+RouterAddres.get('/address/user', getAllAddresUsers.handle);
 
 export { RouterAddres };

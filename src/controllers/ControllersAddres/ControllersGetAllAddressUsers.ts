@@ -1,5 +1,5 @@
 import { Request, Response } from 'express';
-import { GetAlllAddressService } from '../../services/ServicesAddress/ServiceGetAllAddress';
+import { GetAlllAddressService } from '../../services/ServicesAddress/ServiceGetAllAddressUsers';
 
 class GetAlllAddressUsersController {
   async handle(request: Request, response: Response) {
