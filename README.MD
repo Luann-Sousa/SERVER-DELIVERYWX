@@ -21,6 +21,7 @@ Todas as rotas foram testadas utilizando o [Insomnia](https://insomnia.rest/down
 :busts_in_silhouette: **Criação de perfil de usuário**
 
 - [x] Permite que um usuário consiga criar a sua conta no sistema;
+- [x] Permite que um usuário consiga buscar suas informações;
 - [x] Permite que um usuário consiga criar a sua conta sem cadastrar uma foto de perfil;
 - [x] Permite que um usuário consiga criar a sua conta sem cadastrar uma cartão de crédito;
 
