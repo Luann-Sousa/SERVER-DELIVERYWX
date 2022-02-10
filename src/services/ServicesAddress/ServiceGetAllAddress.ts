@@ -5,9 +5,7 @@ class GetAlllAddressService {
   async execute() {
     const addressRepositorie = getRepository(Address);
 
-    const address = await addressRepositorie.find({
-      relations: ['user'],
-    });
+    const address = await addressRepositorie.find();
 
     return address;
   }
