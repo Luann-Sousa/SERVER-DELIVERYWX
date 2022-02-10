@@ -1,7 +1,6 @@
-import { type } from 'os';
 import { MigrationInterface, QueryRunner, Table } from 'typeorm';
 
-export class Address1644472554222 implements MigrationInterface {
+export class AddressCreate1644474163352 implements MigrationInterface {
   public async up(queryRunner: QueryRunner): Promise<void> {
     return queryRunner.createTable(
       new Table({
@@ -11,7 +10,6 @@ export class Address1644472554222 implements MigrationInterface {
             name: 'id',
             type: 'uuid',
             isPrimary: true,
-            isUnique: true,
           },
           {
             name: 'uf',
