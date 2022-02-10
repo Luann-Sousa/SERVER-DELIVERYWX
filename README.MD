@@ -1,109 +1,77 @@
 <h1 align="center"> DeliveryWX.</h1>
 
 <div align="center">
-<img src="https://www.thoroughtec.com/wp-content/uploads/WX-logo-main.png"/>
+  <img src="logo.png">
 </div>
 
 <br/>
 
-## 🎯 About
+### 🎯 Sobre:
 
-Já pensou quando a fome bater ? O seu celular pode ser um aliado: por isso trago a vocês o aplicativo de entrega de comidas e bebidas _DeliveryWX_ aplicativo de fácil usabilidade basta apenas seguir as instruções e informar seu endereço, selecionar o pedido e aguardá-lo em casa, sem a necessidade de fazer ligações ou sair do conforto da sua casa.</br>
+O **DeliveryWX** é uma plataforma WEB e MOBILE para comprar de qualquer tipo de comida ou bebida, isso fica a preferência do usário.
 
-O projeto será desenvolvido com uma intuidade de trazer a comôdidade para nossos usuários, e você como usuário deve se pergunta como assim comodidade, então vamos trazer pra o usuário o poder que ele terá de fazer um pedido de uma comida, bebida ou aquela sobremesa deliciosa, de onde ele estiver sem sair da sua residência.
+A API do **DeliveryWX** irá servir os daods para a plataforma WEB e Mobile disponível para Android.
 </br></br>
 
-<h1 align="center">Recursos do Server.</h1></br>
+### Importar Rotas da Aplicação:
 
-[x] Usuário poderá está fazendo seu cadastro no sistema.</br>
+Todas as rotas foram testadas utilizando o [Insomnia](https://insomnia.rest/download/). Para importar as rotas testadas para o Insomnia clique no botão:
 
-0. será necessário estar passando as seguintes propiedades (email:string, password: string).
+[![Run in Insomnia}](https://insomnia.rest/images/run.svg)](https://insomnia.rest/run/?label=GoBarber&uri=https%3A%2F%2Fraw.githubusercontent.com%2Frodrigorgtic%2Fbackend-gobarber-typescript%2Fmaster%2Finsomnia-api-routes.json)
 
-</br>
+### Recursos da API:
 
-[x] Usuário para fazer uma comprar em nosso sistema ele terá que ter cadastro no sistema e deverá está autenticado na hora de fazer seu pedido.</br>
+:busts_in_silhouette: **Criação de perfil de usuário**
 
-1.  será necessário estar passando as seguintes propiedades ().
+- [x] Permite que um usuário consiga criar a sua conta no sistema;
+- [x] Permite que um usuário consiga criar a sua conta sem cadastrar uma foto de perfil;
+- [x] Permite que um usuário consiga criar a sua conta sem cadastrar uma cartão de crédito;
 
-</br>
+:lock: **Recuperação de senha**
 
-[x] Usuário para fazer uma comprar em nosso sistema ele poderar estar passando seu pedido no crédito ate 3x.</br>
+- [x] Permite que um usuário consiga recuperar a senha informando o e-mail cadastrado;
+- [x] A API envia para o usuário um e-mail con instruções de recuperação de senha;
+- [x] A API envia um link com token por e-mail para resetar a senha e por segurança o token enviado expira em 2h;
+- [x] Cadastro e autenticação de usuários com geração de JwToken;
+- [x] Autenticação de usuários com JwToken;
 
-2.  será necessário estar passando as seguintes propiedades (info:).
+:busts_in_silhouette: **Atualização de perfil de usuário**
 
-</br>
+- [x] Permite usuário cadastrar-se no sistena e atualizar seu perfil (incluindo imagem de avatar);
+- [x] Validação de e-mails no cadastro, não é possível cadastrar dois usuários com mesmo e-mail;
+- [x] Para atualizar a senha, o usuário deve informar a senha antiga e a nova senha;
 
-[x] Usuário poderá está fazendo uma compra de um ou mais produtos em nosso sistema.</br>
+:date: **Agendamento de serviços**
 
-3.  será necessário estar passando as seguintes propiedades (name_prod: string, category_prod: string, quanty_prod: string, price_prod: number).
+- [x] Usuário poderá está fazendo agendamento para receber um pedido em terderminado horário;
 
-</br>
+:shope: **Fazeer Comprar no sistema**
 
-[x] Usuário poderá está escolhendo seu produto de preferência e adicinar ao carrionho e comprar mais tarde ou ate no outro dia.</br>
+- [x] Usuário poderá está fazendo uma compra de um ou mais produtos em nosso sistema;
+- [x] Usuário para fazer uma comprar no sistema ele terá que está cadastrado e deverá está autenticado na hora de fazer seu pedido;
+- [x] Usuário poderá fazer uma comprar, e ele poderá estar passando seu pedido no crédito ate 3x;
+- [x] Usuário poderá está escolhendo o produto de preferência e adicinar ao carrionho e comprar mais tarde ou ate no outro dia;
+- [x] Usuário poderá está fazendo sua escolha, receber o pedido em casa ou ir fazer sua própia retirada no estabelecimento;
+- [x] Usuário quando fizer seu pedido, durante os primeiro 5 minutos ele poderá está fazendo o cancelamento sem ser cobrado algum valor sobre o pedido;
+- [x] Usuário quando fizer seu pedido, ele será capaz de está acompanhando a entrega do pedido atè a sua casa em tempo real;
+- [x] Usuário quando seu pedido estiver a caminho ele poderá está fazendo uma ligação para o motoboy ou estabelecimento;
 
-4.  será necessário estar passando as seguintes propiedades (informações: string).
+### Banco de Dados e Estratégias de Armazenamento:
 
-</br>
+Para banco de dados, foi utilizado o **Mysql** para armazenar os dados que envolvem relacionamentos da regra de negócio da aplicação.
 
-[x] Usuário poderá está fazendo sua escolha receber seu pedido em casa ou ir fazer sua propia retirada no estabelecimento.</br>
+### Ferramentas, Técnicas e Bibliotecas da API:
 
-5.  será necessário estar passando as seguintes propiedades ().
+- [x] Aplicação da metodologia MVC (Model-View-Controller);
+- [x] Utilização do [typescript](https://github.com/microsoft/tsyringe) fazer tipagem em noso código.
+- [x] Utilizado o [mailtrap](https://mailtrap.io/) para testar o envio de e-mails em ambiente de testes;
 
-</br>
-
-[x] Usuário quando fizer seu pedido durante os primeiro 5 minutos ele poderá está fazendo o cancelamento sem ser cobrado algum valor sobre o pedido.</br>
-
-6.  será necessário estar passando as seguintes propiedades (info).
-
-</br>
-
-[x] Usuário quando fizer seu pedido e passar os primeiro 5 minutos ele poderá está fazendo o cancelamento mas vai ser cobrado algum valor sobre o pedido ex: $7.</br>
-
-7.  será necessário estar passando as seguintes propiedades (info).
-
-</br>
-
-[x] Usuário quando fizer seu pedido ele será capaz de está acompanha sua entrega em tempo real.</br>
-
-8.  será necessário estar passando as seguintes propiedades (info).
-
-</br>
-
-[x] Usuário quando seu pedido estiver a caminho ele poderá está fazendo uma ligação para o motoboy ou estabelecimento.</br>
-
-9.  será necessário estar passando as seguintes propiedades (email:string, password: string).
-
-</br>
-
-[x] Usuário poderá está fazendo seu cadastro no serividor.</br>
-
-10. será necessário estar passando as seguintes propiedades (email:string, password: string).
-
-## Tecnologias utilizadas.
-
-- [EndPoint API's](https://www.themoviedb.org/)
-- [React Native](https://reactjs.org/)
-- [React Hooks](https://reactjs.org/docs/hooks-intro.html)
-- [React Hooks Form](https://react-hook-form.com/)
-- [Google Maps](https://github.com/reduxjs/reselect)
-- [Firebase](https://firebase.google.com/)
-- [SCSS](https://sass-lang.com/)
-- [React Navigation](https://swiperjs.com/react)
-- [Framer Motion](https://www.framer.com/motion/)
-- [React Icons](https://react-icons.github.io/react-icons/)
-
-<br/>
-
-## 📸 Screenshots
-
-<br/>
-
-## 👨🏻‍💻 Run Locally <br/>
+## 👨🏻‍💻 Roda Projeto em Sua Máquina:
 
 - Clone the project
 
 ```bash
-  git clone https://github.com/Th3Wall/deliverywx
+  git clone https://github.com/Luann244/SERVER-DELIVERYWX
 ```
 
 - Go to the project directory
@@ -117,3 +85,7 @@ O projeto será desenvolvido com uma intuidade de trazer a comôdidade para noss
 ```bash
   npm install
 ```
+
+<div align="center">
+  <small>Weverson Luan Sousa - 2022</small>
+</div>
