@@ -1,7 +1,7 @@
 import { Request, Response } from 'express';
 import { GetAlllAddressService } from '../../services/ServicesAddress/ServiceGetAllAddress';
 
-class GetAlllAddressController {
+class GetAlllAddressUsersController {
   async handle(request: Request, response: Response) {
     const service = new GetAlllAddressService();
 
@@ -14,4 +14,4 @@ class GetAlllAddressController {
   }
 }
 
-export { GetAlllAddressController };
+export { GetAlllAddressUsersController };
