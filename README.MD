@@ -57,7 +57,7 @@ Para banco de dados, foi utilizado o **Mysql** para armazenar os dados que envol
 
 - [x] Utilização dos Princípios do SOLID;
 - [x] Aplicação da metodologia MVC (Model-View-Controller);
-- [x] Utilização do [tsyringe](https://github.com/microsoft/tsyringe) para automatizar a injeção de dependência.
+- [x] Utilização do [typescript](https://github.com/microsoft/tsyringe) para automatizar a injeção de dependência.
 - [x] Utilizado o [mailtrap](https://mailtrap.io/) para testar o envio de e-mails em ambiente de testes;
 
 ## 👨🏻‍💻 Run Locally <br/>
