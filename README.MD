@@ -12,7 +12,7 @@ O **DeliveryWX** é uma plataforma WEB e MOBILE para compra de qualquer tipo de 
 
 A API do **DeliveryWX** irá servir os dados para a plataforma WEB e Mobile disponível para Android.
 
-### Importar Rotas da Aplicação:
+### Aplicação Utilizada para Teste:
 
 Todas as rotas foram testadas utilizando o [Insomnia](https://insomnia.rest/download/).
 
