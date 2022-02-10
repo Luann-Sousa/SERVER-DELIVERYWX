@@ -8,7 +8,7 @@
 
 ### 🎯 Sobre:
 
-O O **DeliveryWX** é uma plataforma WEB e MOBILE para comprar de qualquer tipo de comida ou bebida, isso fica a preferência do usário.
+O **DeliveryWX** é uma plataforma WEB e MOBILE para comprar de qualquer tipo de comida ou bebida, isso fica a preferência do usário.
 
 A API do **DeliveryWX** irá servir os daods para a plataforma WEB e Mobile disponível para Android.
 </br></br>
