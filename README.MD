@@ -14,9 +14,7 @@ A API do **DeliveryWX** irá servir os dados para a plataforma WEB e Mobile disp
 
 ### Importar Rotas da Aplicação:
 
-Todas as rotas foram testadas utilizando o [Insomnia](https://insomnia.rest/download/). Para importar as rotas testadas para o Insomnia clique no botão:
-
-[![Run in Insomnia}](https://insomnia.rest//run.svg)](https://insomnia.rest/run/?label=GoBarn)
+Todas as rotas foram testadas utilizando o [Insomnia](https://insomnia.rest/download/).
 
 ### Recursos da API:
 
