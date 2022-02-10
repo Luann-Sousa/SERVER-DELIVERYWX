@@ -4,10 +4,63 @@ import {
   Column,
   CreateDateColumn,
   UpdateDateColumn,
+  ManyToOne,
+  JoinColumn,
 } from 'typeorm';
 import { v4 as uuidV4 } from 'uuid';
+import { User } from './User';
 
-@Entity()
-class Address {}
+@Entity('address')
+class Address {
+  @PrimaryColumn()
+  id: string;
+
+  @Column()
+  uf: string;
+
+  @Column()
+  city: string;
+
+  @Column()
+  zip_code: string;
+
+  @Column()
+  district: string;
+
+  @Column()
+  street: string;
+
+  @Column()
+  numeber: string;
+
+  @Column()
+  complement: string;
+
+  @Column()
+  lat: number;
+
+  @Column()
+  long: number;
+
+  @Column()
+  user_id: string;
+
+  @ManyToOne(() => User, {
+    cascade: true,
+    onDelete: 'CASCADE',
+    onUpdate: 'CASCADE',
+  })
+  @JoinColumn({ name: 'user_id' }) ///qual coluna dentro da minha tabela de videos que tou referenciando
+  user: User;
+  @CreateDateColumn()
+  created_at: Date;
+
+  @UpdateDateColumn()
+  updated_at: Date;
+
+  constructor() {
+    if (!this.id) this.id = uuidV4();
+  }
+}
 
 export { Address };
