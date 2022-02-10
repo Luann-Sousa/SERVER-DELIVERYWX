@@ -21,6 +21,12 @@ Todas as rotas foram testadas utilizando o [Insomnia](https://insomnia.rest/down
 
 ### Recursos da API:
 
+:busts_in_silhouette: **Criação de perfil de usuário**
+
+- [x] Permite que um usuário consiga criar a sua conta no sistema;
+- [x] Permite que um usuário consiga criar a sua conta sem cadastrar uma foto de perfil;
+- [x] Permite que um usuário consiga criar a sua conta sem cadastrar uma cartão de crédito;
+
 :lock: **Recuperação de senha**
 
 - [x] Permite que um usuário consiga recuperar a senha informando o e-mail cadastrado;
@@ -37,17 +43,18 @@ Todas as rotas foram testadas utilizando o [Insomnia](https://insomnia.rest/down
 
 :date: **Agendamento de serviços**
 
+- [x] Usuário poderá está fazendo agendamento para receber um pedido em terderminado horário;
+
 :shope: **Fazeer Comprar no sistema**
 
 - [x] Usuário poderá está fazendo uma compra de um ou mais produtos em nosso sistema;
-- [x] Usuário para fazer uma comprar em nosso sistema ele terá que está cadastrado no sistema e deverá está autenticado na hora de fazer seu pedido;
-- [x] Usuário para fazer uma comprar em nosso sistema ele poderar estar passando seu pedido no crédito ate 3x;
-- [x] Usuário poderá está escolhendo seu produto de preferência e adicinar ao carrionho e comprar mais tarde ou ate no outro dia;
-- [x] Usuário poderá está fazendo sua escolha receber seu pedido em casa ou ir fazer sua propia retirada no estabelecimento;
-- [x] Usuário quando fizer seu pedido durante os primeiro 5 minutos ele poderá está fazendo o cancelamento sem ser cobrado algum valor sobre o pedido;
-- [x] Usuário quando fizer seu pedido ele será capaz de está acompanha sua entrega em tempo real;
+- [x] Usuário para fazer uma comprar no sistema ele terá que está cadastrado e deverá está autenticado na hora de fazer seu pedido;
+- [x] Usuário poderá fazer uma comprar, e ele poderá estar passando seu pedido no crédito ate 3x;
+- [x] Usuário poderá está escolhendo o produto de preferência e adicinar ao carrionho e comprar mais tarde ou ate no outro dia;
+- [x] Usuário poderá está fazendo sua escolha, receber o pedido em casa ou ir fazer sua própia retirada no estabelecimento;
+- [x] Usuário quando fizer seu pedido, durante os primeiro 5 minutos ele poderá está fazendo o cancelamento sem ser cobrado algum valor sobre o pedido;
+- [x] Usuário quando fizer seu pedido, ele será capaz de está acompanhando a entrega do pedido atè a sua casa em tempo real;
 - [x] Usuário quando seu pedido estiver a caminho ele poderá está fazendo uma ligação para o motoboy ou estabelecimento;
-- [x] Usuário poderá está fazendo seu cadastro no serividor;
 
 ### Banco de Dados e Estratégias de Armazenamento:
 
