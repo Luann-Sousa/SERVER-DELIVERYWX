@@ -5,6 +5,6 @@ const RouterAddres = express.Router();
 
 const createAddres = new CreateAddressController(); //criação de um endereço.
 
-RouterAddres.post('/addres', createAddres.handle);
+RouterAddres.post('/address', createAddres.handle);
 
 export { RouterAddres };

@@ -2,14 +2,14 @@ import 'reflect-metadata';
 import 'express-async-errors';
 import express, { Request, Response, NextFunction } from 'express';
 import './database';
-import { MainRouterUsers } from './routes';
+import { MainRouterUsers, MainRouterAddress } from './routes';
 
 const app = express();
 
 app.use(express.json()); // trabalhar com json
 
 //rotas da aplicação
-app.use(MainRouterUsers);
+app.use(MainRouterUsers, MainRouterAddress);
 
 // funtion capturando os erros da aplicação.
 app.use(
