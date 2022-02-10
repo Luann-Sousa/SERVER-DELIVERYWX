@@ -60,7 +60,7 @@ Para banco de dados, foi utilizado o **Mysql** para armazenar os dados que envol
 
 ### Ferramentas, Técnicas e Bibliotecas da API:
 
-- [x] Aplicação Utilizando a metodologia MVC (Model-View-Controller);
+- [x] Aplicação Utilizando a Metodologia MVC (Model-View-Controller);
 - [x] Utilização do [express](https://expressjs.com/pt-br/) O Express é um framework para aplicativo da web do Node.js mínimo e flexível;
 - [x] Utilização do [typescript](https://github.com/microsoft/tsyringe) fazer tipagem em noso código;
 - [x] Utilização do [mysql](https://www.npmjs.com/package/mysql2) fazer armazenamento da nossas informações;
