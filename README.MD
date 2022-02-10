@@ -1,7 +1,7 @@
 <h1 align="center"> DeliveryWX.</h1>
 
 <div align="center">
-  <img src="logo.svg">
+  <img src="logo.png">
 </div>
 
 <br/>
