@@ -61,8 +61,12 @@ Para banco de dados, foi utilizado o **Mysql** para armazenar os dados que envol
 ### Ferramentas, Técnicas e Bibliotecas da API:
 
 - [x] Aplicação da metodologia MVC (Model-View-Controller);
+- [x] Utilização do [express](https://expressjs.com/pt-br/) O Express é um framework para aplicativo da web do Node.js mínimo e flexível que fornece um conjunto robusto de recursos para aplicativos web e móvel.
 - [x] Utilização do [typescript](https://github.com/microsoft/tsyringe) fazer tipagem em noso código.
-- [x] Utilizado o [mailtrap](https://mailtrap.io/) para testar o envio de e-mails em ambiente de testes;
+- [x] Utilização do [mysql](https://www.npmjs.com/package/mysql2) fazer armazenamento da nossas informações.
+- [x] Utilizado o [uuid](https://www.npmjs.com/package/uuid) Um identificador único universal (do inglês universally unique identifier - UUID);
+- [x] Utilização do [jwt](https://jwt.io/) para trabalhar com autenticação de usuário.
+- [x] Utilização do [bcrypt.js](https://jwt.io/) para trabalhar com hash de senhas de usuário exe: [h84uh734f3].
 
 ## 👨🏻‍💻 Roda Projeto em Sua Máquina:
 
