@@ -1,5 +1,5 @@
 import { Request, Response } from 'express';
-import { GetAlllCardService } from '../../services/ServicesCard/ServicesGetAllCard';
+import { GetAlllCardService } from '../../services/ServicesCard/ServiceGetAllCard';
 
 class GetAlllCardController {
   async handle(request: Request, response: Response) {
