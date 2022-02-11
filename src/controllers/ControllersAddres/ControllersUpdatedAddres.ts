@@ -19,7 +19,7 @@ class UpdateUserController {
 
     const userService = new ServiceUpdatedAddres();
 
-    const user = await userService.execute({
+    const result = await userService.execute({
       id,
       uf,
       city,
@@ -32,14 +32,14 @@ class UpdateUserController {
       long,
       user_id,
     });
-    if (user instanceof Error) {
-      return response.json(user.message);
+    if (result instanceof Error) {
+      return response.json(result.message);
     }
 
     return response.status(200).json({
       status: 200,
       messeger: 'Usuário foi atualizada com sucesso!',
-      user: user,
+      addres: result,
     });
   }
 }
