@@ -1,7 +1,7 @@
 import { Request, Response } from 'express';
 import { GetAlllCardService } from '../../services/ServicesCard/ServiceGetAllCard';
 
-class GetAlllCardController {
+class ControllersGetAllCardUsers {
   async handle(request: Request, response: Response) {
     const service = new GetAlllCardService();
 
@@ -14,4 +14,4 @@ class GetAlllCardController {
   }
 }
 
-export { GetAlllCardController };
+export { ControllersGetAllCardUsers };
