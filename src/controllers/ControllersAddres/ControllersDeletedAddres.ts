@@ -7,11 +7,16 @@ class ControllersDeletedAddres {
 
     const userDeleted = new ServiceDeletedAddres();
 
-    const user = userDeleted.execute({ id_addres });
+    const user = await userDeleted.execute({ id_addres });
+
+    if (user instanceof Error) {
+      return response.json(user.message);
+    }
 
     return response.status(200).json({
       status: 200,
-      user,
+      messeger: 'Usuário foi excluido com sucesso!',
+      user: user,
     });
   }
 }

@@ -9,10 +9,10 @@ class ServiceDeletedAddres {
   async execute({ id_addres }: IUserProps) {
     const repositorieDeleted = getCustomRepository(RepositorieAddress);
 
-    const userAllExists = repositorieDeleted.findOne(id_addres);
-
+    const userAllExists = await repositorieDeleted.findOne(id_addres);
+    console.log(userAllExists);
     if (!userAllExists) {
-      throw new Error('Não existe esse endereço cadastrado tente outro !');
+      return new Error('Não existe esse endereço cadastrado tente outro !');
     }
     const userDeleted = await repositorieDeleted.delete(id_addres);
 
