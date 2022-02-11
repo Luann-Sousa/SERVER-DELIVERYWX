@@ -1,7 +1,7 @@
 import { Request, Response } from 'express';
 import { CreateUserService } from '../../services/ServicesCard/ServiceCreateCard';
 
-class UserCreateControler {
+class CardCreateControler {
   async handle(request: Request, response: Response) {
     const { name_card, number_card, cpf_card, date_card, cvv_card, user_id } =
       request.body;
@@ -23,4 +23,4 @@ class UserCreateControler {
   }
 }
 
-export { UserCreateControler };
+export { CardCreateControler };
