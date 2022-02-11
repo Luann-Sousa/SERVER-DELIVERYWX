@@ -16,6 +16,9 @@ class CardCreateControler {
       cvv_card,
       user_id,
     });
+    if (result instanceof Error) {
+      new Error('Error em cadastrar seu cartão tente mais tarde !');
+    }
     return response.status(201).json({
       status: 200,
       cards: result,
