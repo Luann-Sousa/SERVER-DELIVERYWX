@@ -8,7 +8,7 @@ class GetAlllAddressUsersController {
     const result = await service.execute();
 
     return response.status(200).json({
-      status: 2000,
+      status: 200,
       address: result,
     });
   }
