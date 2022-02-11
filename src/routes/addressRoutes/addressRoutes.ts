@@ -18,6 +18,6 @@ RouterAddres.post('/address', createAddres.handle);
 RouterAddres.get('/address', getAllAddress.handle);
 RouterAddres.get('/address/user', getAllAddresUsers.handle);
 RouterAddres.put('/address/:id', updatedAddresUsers.handle);
-RouterAddres.delete('/v1/address/delet/id_addres', deletedAddressUsers.handle);
+RouterAddres.delete('/v1/address/delet/:id_addres', deletedAddressUsers.handle);
 
 export { RouterAddres };
