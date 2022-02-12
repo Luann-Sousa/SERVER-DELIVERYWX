@@ -20,7 +20,7 @@ class ServiceProductCreate {
   }: IProductProps) {
     const productService = getCustomRepository(RepositoriesProduct);
 
-    const productCreate = await productService.create({
+    const productCreate = productService.create({
       name,
       description,
       price,
