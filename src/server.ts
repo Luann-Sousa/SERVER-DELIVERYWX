@@ -13,7 +13,7 @@ const app = express();
 
 app.use(express.json()); // trabalhar com json
 
-//rotas da aplicação
+//rotas da aplicação que vãos er usada
 app.use(MainRouterUsers, MainRouterAddress, MainRouterCard, MainRouterProduct);
 
 // funtion capturando os erros da aplicação.

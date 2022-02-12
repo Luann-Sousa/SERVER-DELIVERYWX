@@ -19,6 +19,9 @@ class Products {
   name: string;
 
   @Column()
+  categories: string;
+
+  @Column()
   description: string;
 
   @Column()
@@ -26,6 +29,15 @@ class Products {
 
   @Column()
   quantity: number;
+
+  @Column()
+  delivery_fee: number;
+
+  @Column()
+  delivery_time: string;
+
+  @Column()
+  assessment: number;
 
   @Column()
   user_id: string;

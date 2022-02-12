@@ -6,7 +6,6 @@ class ControllersDeletdProduct {
     const { id_product } = request.params;
 
     const productDeleted = new ServiceDeletedProduct();
-
     const product = await productDeleted.execute({ id_product });
 
     if (product instanceof Error) {

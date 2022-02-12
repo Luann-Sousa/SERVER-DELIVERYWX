@@ -1,6 +1,6 @@
 import { getCustomRepository } from 'typeorm';
 import { UserRepositorie } from '../../repositories/RepositoriesUser';
-// import { hash } from 'bcryptjs';
+import { hash } from 'bcryptjs';
 interface IUserProps {
   id: string;
   name: string;
@@ -34,11 +34,11 @@ class UpdateUserService {
     if (!user) {
       return new Error('Não possui esse usário em nosso sitema tente outro !');
     }
-    // const passwordHash = await hash(password, 8);
+    const passwordHash = await hash(password, 10);
     user.name = name ? name : user.name;
     user.username = username ? username : user.username;
     user.email = email ? email : user.email;
-    user.password = password ? password : user.password;
+    user.password = passwordHash ? passwordHash : user.password;
     user.cpf = cpf ? cpf : user.cpf;
     user.file = file ? file : user.file;
     user.nivel_user = nivel_user ? nivel_user : user.nivel_user;

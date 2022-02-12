@@ -3,14 +3,28 @@ import { ServiceProductCreate } from '../../services/ServicesProducts/ServicePro
 
 class ControllersCreateProduct {
   async handle(request: Request, response: Response) {
-    const { name, description, price, quantity, user_id } = request.body;
+    const {
+      name,
+      categories,
+      description,
+      price,
+      quantity,
+      delivery_fee,
+      delivery_time,
+      assessment,
+      user_id,
+    } = request.body;
     const controllersProduct = new ServiceProductCreate();
 
     const result = await controllersProduct.execute({
       name,
+      categories,
       description,
       price,
       quantity,
+      delivery_fee,
+      delivery_time,
+      assessment,
       user_id,
     });
 

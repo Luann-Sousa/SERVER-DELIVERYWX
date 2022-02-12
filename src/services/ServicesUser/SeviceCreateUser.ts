@@ -1,5 +1,6 @@
 import { getCustomRepository } from 'typeorm';
 import { UserRepositorie } from '../../repositories/RepositoriesUser';
+import { hashSync } from 'bcryptjs';
 
 interface IUserProps {
   name: string;
@@ -35,11 +36,13 @@ class CreateUserService {
       throw new Error('Já possui um usuário com este email tente outro !');
     }
 
+    const hashPassword = hashSync(password, 10);
+
     const user = useReposotry.create({
       name,
       username,
       email,
-      password,
+      password: hashPassword,
       cpf,
       phone,
       file,
