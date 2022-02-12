@@ -6,7 +6,7 @@ class ServiceGetAllPayment {
     const productRepositorie = getRepository(Payments);
 
     const products = await productRepositorie.find({
-      relations: ['user', 'card'],
+      relations: ['user'],
     });
 
     console.log(products);
