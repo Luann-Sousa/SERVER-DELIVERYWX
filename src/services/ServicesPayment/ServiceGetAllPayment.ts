@@ -5,11 +5,7 @@ class ServiceGetAllPayment {
   async execute() {
     const paymentsRepositorie = getRepository(Payments);
 
-    const payments = await paymentsRepositorie.find({
-      relations: ['user', 'card'],
-    });
-
-    console.log('payment', payments);
+    const payments = await paymentsRepositorie.find();
 
     return payments;
   }
