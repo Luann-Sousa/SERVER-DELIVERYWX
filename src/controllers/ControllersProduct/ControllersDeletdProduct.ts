@@ -1,7 +1,7 @@
 import { Request, Response } from 'express';
 import { ServiceDeletedProduct } from '../../services/ServicesProducts/ServiceDeletedProduct';
 
-class ControllersDeletedAddres {
+class ControllersDeletdProduct {
   async handle(request: Request, response: Response) {
     const { id_product } = request.params;
 
@@ -20,4 +20,4 @@ class ControllersDeletedAddres {
     });
   }
 }
-export { ControllersDeletedAddres };
+export { ControllersDeletdProduct };
