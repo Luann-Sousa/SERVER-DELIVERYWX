@@ -5,7 +5,7 @@ interface IProductProps {
   id_product: string;
 }
 
-class ServiceDeletedAddres {
+class ServiceDeletedProduct {
   async execute({ id_product }: IProductProps) {
     const repositorieDeleted = getCustomRepository(RepositoriesProduct);
 
@@ -20,4 +20,4 @@ class ServiceDeletedAddres {
   }
 }
 
-export { ServiceDeletedAddres };
+export { ServiceDeletedProduct };
