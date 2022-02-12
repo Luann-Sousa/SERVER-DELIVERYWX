@@ -25,7 +25,7 @@ class Products {
   price: number;
 
   @Column()
-  quantity: string;
+  quantity: number;
 
   @Column()
   user_id: string;
