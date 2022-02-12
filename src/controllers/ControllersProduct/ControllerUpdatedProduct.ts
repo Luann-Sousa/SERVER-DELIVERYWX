@@ -23,7 +23,7 @@ class ControllerUpdatedProduct {
     return response.status(200).json({
       status: 200,
       messeger: 'Produto foi atualizada com sucesso!',
-      addres: result,
+      products: result,
     });
   }
 }
