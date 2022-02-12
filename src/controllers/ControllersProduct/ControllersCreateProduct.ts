@@ -21,7 +21,7 @@ class ControllersCreateProduct {
     }
 
     return response.status(200).json({
-      status: 200,
+      status: 2000,
       products: result,
     });
   }
