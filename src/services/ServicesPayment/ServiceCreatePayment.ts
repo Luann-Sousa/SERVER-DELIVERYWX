@@ -4,10 +4,10 @@ import { RepositoriesPayment } from '../../repositories/RepositoriePayment';
 interface IPaymentProps {
   obeservation: string;
   type_payment: string;
-  name_expresso_card: string;
-  number_card: number;
-  date_card: string;
-  cvv_card: number;
+  name_expresso_card?: string;
+  number_card?: number;
+  date_card?: string;
+  cvv_card?: number;
   quantity: number;
   resumo: string;
   toti: string;
@@ -15,11 +15,12 @@ interface IPaymentProps {
   user_id: string;
 }
 
-class CreateUserService {
+class ServiceCreatePayment {
   async execute({
     obeservation,
     type_payment,
     name_expresso_card,
+    number_card,
     date_card,
     cvv_card,
     quantity,
@@ -34,6 +35,7 @@ class CreateUserService {
       obeservation,
       type_payment,
       name_expresso_card,
+      number_card,
       date_card,
       cvv_card,
       quantity,
@@ -49,4 +51,4 @@ class CreateUserService {
   }
 }
 
-export { CreateUserService };
+export { ServiceCreatePayment };
