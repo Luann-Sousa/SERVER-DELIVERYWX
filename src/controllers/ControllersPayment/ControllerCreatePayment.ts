@@ -1,7 +1,7 @@
 import { Request, Response } from 'express';
 import { ServiceCreatePayment } from '../../services/ServicesPayment/ServiceCreatePayment';
 
-class ControllersCreateCardUsers {
+class ControllersCreatePayment {
   async handle(request: Request, response: Response) {
     const {
       obeservation,
@@ -40,4 +40,4 @@ class ControllersCreateCardUsers {
   }
 }
 
-export { ControllersCreateCardUsers };
+export { ControllersCreatePayment };

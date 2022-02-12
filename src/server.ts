@@ -7,6 +7,7 @@ import {
   MainRouterAddress,
   MainRouterCard,
   MainRouterProduct,
+  MainRouterPayment,
 } from './routes';
 
 const app = express();
@@ -14,7 +15,13 @@ const app = express();
 app.use(express.json()); // trabalhar com json
 
 //rotas da aplicação que vãos er usada
-app.use(MainRouterUsers, MainRouterAddress, MainRouterCard, MainRouterProduct);
+app.use(
+  MainRouterUsers,
+  MainRouterAddress,
+  MainRouterCard,
+  MainRouterProduct,
+  MainRouterPayment,
+);
 
 // funtion capturando os erros da aplicação.
 app.use(
