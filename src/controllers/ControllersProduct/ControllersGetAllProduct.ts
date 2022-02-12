@@ -8,7 +8,7 @@ class ControllersGetAllCardUsers {
     const result = await controllersGetAll.execute();
 
     return response.status(200).json({
-      status: 2000,
+      status: 200,
       address: result,
     });
   }
