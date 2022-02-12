@@ -3,15 +3,15 @@ import { Payments } from '../../entities/Payment';
 
 class ServiceGetAllPayment {
   async execute() {
-    const productRepositorie = getRepository(Payments);
+    const paymentsRepositorie = getRepository(Payments);
 
-    const products = await productRepositorie.find({
-      relations: ['user'],
+    const payments = await paymentsRepositorie.find({
+      relations: ['user', 'card'],
     });
 
-    console.log(products);
+    console.log('payment', payments);
 
-    return products;
+    return payments;
   }
 }
 
