@@ -11,6 +11,6 @@ const RouterPayment = express.Router();
 
 RouterPayment.post('/v1/payments', createPayment.handle);
 RouterPayment.get('/v1/payments', getAllPayment.handle);
-RouterPayment.get('/v1/payments/relat', getAllRelatPayment.handle);
+RouterPayment.get('/v1/payments/relations', getAllRelatPayment.handle);
 
 export { RouterPayment };
