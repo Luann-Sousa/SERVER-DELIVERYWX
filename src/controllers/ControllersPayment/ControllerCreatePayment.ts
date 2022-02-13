@@ -39,6 +39,7 @@ class ControllersCreatePayment {
     }
     return response.status(201).json({
       status: 200,
+      messeger: 'Parabéns seu pagamento foi efetuado com susceso!',
       payments: result,
     });
   }

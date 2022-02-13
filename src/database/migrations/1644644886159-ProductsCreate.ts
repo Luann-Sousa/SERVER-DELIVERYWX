@@ -29,7 +29,7 @@ export class ProductsCreate1644644886159 implements MigrationInterface {
             type: 'numeric',
           },
           {
-            name: 'quantity',
+            name: 'stock',
             type: 'numeric',
           },
           {

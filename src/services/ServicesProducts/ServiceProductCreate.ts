@@ -2,16 +2,16 @@ import { getCustomRepository } from 'typeorm';
 import { RepositoriesProduct } from '../../repositories/RepositorieProduct';
 
 //tipagem
-interface IProductProps {
-  name: string;
-  categories: string;
-  description: string;
-  price: number;
-  quantity: number;
-  delivery_fee: number;
-  delivery_time: string;
-  assessment: number;
-  user_id: string;
+export interface IProductProps {
+  name?: string;
+  categories?: string;
+  description?: string;
+  price?: number;
+  stock?: number;
+  delivery_fee?: number;
+  delivery_time?: string;
+  assessment?: number;
+  user_id?: string;
 }
 
 class ServiceProductCreate {
@@ -20,7 +20,7 @@ class ServiceProductCreate {
     categories,
     description,
     price,
-    quantity,
+    stock,
     delivery_fee,
     delivery_time,
     assessment,
@@ -33,7 +33,7 @@ class ServiceProductCreate {
       categories,
       description,
       price,
-      quantity,
+      stock,
       delivery_fee,
       delivery_time,
       assessment,

@@ -9,7 +9,7 @@ class ControllersGetAllProduct {
 
     return response.status(200).json({
       status: 200,
-      address: result,
+      products: result,
     });
   }
 }

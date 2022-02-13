@@ -28,7 +28,7 @@ class Products {
   price: number;
 
   @Column()
-  quantity: number;
+  stock: number;
 
   @Column()
   delivery_fee: number;
