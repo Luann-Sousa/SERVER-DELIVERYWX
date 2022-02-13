@@ -15,6 +15,7 @@ class ControllersCreatePayment {
       toti,
       card_id,
       user_id,
+      product_id,
     } = request.body;
 
     const paymentController = new ServiceCreatePayment();
@@ -31,6 +32,7 @@ class ControllersCreatePayment {
       toti,
       card_id,
       user_id,
+      product_id,
     });
     if (result instanceof Error) {
       new Error('Error em fazer seu pagamento tente mais tarde !');

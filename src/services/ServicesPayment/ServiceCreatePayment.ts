@@ -13,6 +13,7 @@ interface IPaymentProps {
   toti: string;
   card_id?: string;
   user_id: string;
+  product_id?: string;
 }
 
 class ServiceCreatePayment {
@@ -28,6 +29,7 @@ class ServiceCreatePayment {
     toti,
     card_id,
     user_id,
+    product_id,
   }: IPaymentProps) {
     const paymentReposotry = getCustomRepository(RepositoriesPayment);
 
@@ -43,6 +45,7 @@ class ServiceCreatePayment {
       toti,
       card_id,
       user_id,
+      product_id,
     });
 
     await paymentReposotry.save(payment);

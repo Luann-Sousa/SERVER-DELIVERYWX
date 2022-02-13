@@ -10,6 +10,7 @@ import {
 import { v4 as uuidV4 } from 'uuid';
 import { Cards } from './Cards';
 import { User } from './User';
+import { Products } from './Products';
 
 @Entity('payments')
 class Payments {
@@ -49,6 +50,9 @@ class Payments {
   @Column()
   user_id: string;
 
+  @Column()
+  product_id?: string;
+
   @ManyToOne(() => User, {
     cascade: true,
     onDelete: 'CASCADE',
@@ -64,6 +68,14 @@ class Payments {
   })
   @JoinColumn({ name: 'card_id' }) ///qual coluna dentro da minha tabela de videos que tou referenciando
   card: Cards;
+
+  @ManyToOne(() => Products, {
+    cascade: true,
+    onDelete: 'CASCADE',
+    onUpdate: 'CASCADE',
+  })
+  @JoinColumn({ name: 'product_id' }) ///qual coluna dentro da minha tabela de videos que tou referenciando
+  product: Products;
 
   @CreateDateColumn()
   created_at: Date;
