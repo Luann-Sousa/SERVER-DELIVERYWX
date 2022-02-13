@@ -1,9 +1,9 @@
 import { Request, Response } from 'express';
-import { ServiceGetAllPayment } from '../../services/ServicesPayment/ServiceGetAllPayment';
+import { ServiceGetRelatPayment } from '../../services/ServicesPayment/ServiceGetRelatPayment';
 
 class ControllersGetRelatPayments {
   async handle(request: Request, response: Response) {
-    const paymentController = new ServiceGetAllPayment();
+    const paymentController = new ServiceGetRelatPayment();
 
     const result = await paymentController.execute();
 
