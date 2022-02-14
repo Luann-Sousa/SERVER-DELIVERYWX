@@ -49,7 +49,7 @@ class Company {
     onDelete: 'CASCADE',
     onUpdate: 'CASCADE',
   })
-  @JoinColumn({ name: 'address_id' }) ///qual coluna dentro da minha tabela de videos que tou referenciando
+  @JoinColumn({ name: 'user_id' }) ///qual coluna dentro da minha tabela de videos que tou referenciando
   user: User;
 
   @ManyToMany(() => Address, {
@@ -57,7 +57,7 @@ class Company {
     onDelete: 'CASCADE',
     onUpdate: 'CASCADE',
   })
-  @JoinColumn({ name: 'user_id' }) ///qual coluna dentro da minha tabela de videos que tou referenciando
+  @JoinColumn({ name: 'address_id' }) ///qual coluna dentro da minha tabela de videos que tou referenciando
   address: Address[];
 
   @CreateDateColumn()
