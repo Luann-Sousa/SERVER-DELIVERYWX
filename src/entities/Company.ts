@@ -36,7 +36,7 @@ class Company {
   delivery_feed: number;
 
   @Column()
-  delivery_time: number;
+  delivery_time: string;
 
   @Column()
   user_id: string;
