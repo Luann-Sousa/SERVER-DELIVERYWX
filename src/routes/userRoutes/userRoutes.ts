@@ -1,5 +1,8 @@
 import express from 'express';
 
+import multer from 'multer';
+import createMulter from '../../utils/upload';
+
 import { UserCreateControler } from '../../controllers/ControllersUser/ControllersCreateUser';
 import { UpdateUserController } from '../../controllers/ControllersUser/ControllersUpdatedUser';
 import { DeletedUserController } from '../../controllers/ControllersUser/ControllersDeletedUser';
@@ -14,10 +17,12 @@ const getOneUser = new GetOneUserController(); // buscar por um usuário especif
 
 const Router = express.Router();
 
-Router.post('/users', createUser.handle);
-Router.put('/users/:id', updatedUser.handle);
-Router.delete('/users/:id', deletedUser.handle);
-Router.get('/users', getlAllUser.handle);
-Router.get('/users/:user_id', getOneUser.handle);
+const upload = multer(createMulter); //instânciando o multer para já usarmos.
+
+Router.post('/v1/users', upload.single('file'), createUser.handle);
+Router.put('/v1/users/:id', updatedUser.handle);
+Router.delete('/v1/users/:id', deletedUser.handle);
+Router.get('/v1/users', getlAllUser.handle);
+Router.get('/v1/users/:user_id', getOneUser.handle);
 
 export { Router };
