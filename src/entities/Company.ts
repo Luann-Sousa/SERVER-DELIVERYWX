@@ -6,6 +6,7 @@ import {
   UpdateDateColumn,
   ManyToOne,
   JoinColumn,
+  JoinTable,
   ManyToMany,
 } from 'typeorm';
 import { v4 as uuidV4 } from 'uuid';
@@ -44,12 +45,12 @@ class Company {
   @Column()
   address_id: string;
 
-  @ManyToOne(() => User, {
+  @ManyToMany(() => User, {
     cascade: true,
     onDelete: 'CASCADE',
     onUpdate: 'CASCADE',
   })
-  @JoinColumn({ name: 'user_id' }) ///qual coluna dentro da minha tabela de videos que tou referenciando
+  @JoinTable({ name: 'user_id' }) ///qual coluna dentro da minha tabela de videos que tou referenciando
   user: User;
 
   @ManyToMany(() => Address, {
@@ -57,7 +58,7 @@ class Company {
     onDelete: 'CASCADE',
     onUpdate: 'CASCADE',
   })
-  @JoinColumn({ name: 'address_id' }) ///qual coluna dentro da minha tabela de videos que tou referenciando
+  @JoinTable({ name: 'address_id' }) ///qual coluna dentro da minha tabela de videos que tou referenciando
   address: Address[];
 
   @CreateDateColumn()

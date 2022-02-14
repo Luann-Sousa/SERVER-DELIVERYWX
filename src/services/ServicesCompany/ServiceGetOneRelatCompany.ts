@@ -3,13 +3,13 @@ import { Company } from '../../entities/Company';
 
 class ServiceGetOneRelatCompany {
   async execute() {
-    const companyRepositorie = getRepository(Company);
+    const paymentsRepositorie = getRepository(Company);
 
-    const companys = await companyRepositorie.find({
+    const payments = await paymentsRepositorie.find({
       relations: ['user', 'address'],
     });
 
-    return companys;
+    return payments;
   }
 }
 

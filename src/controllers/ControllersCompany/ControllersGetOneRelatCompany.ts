@@ -3,9 +3,9 @@ import { ServiceGetOneRelatCompany } from '../../services/ServicesCompany/Servic
 
 class ControllersGetOneRelatCompany {
   async handle(request: Request, response: Response) {
-    const serviceCompany = new ServiceGetOneRelatCompany();
+    const companytController = new ServiceGetOneRelatCompany();
 
-    const result = await serviceCompany.execute();
+    const result = await companytController.execute();
 
     return response.status(200).json({
       status: 200,
