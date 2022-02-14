@@ -23,6 +23,6 @@ Router.post('/v1/users', upload.single('file'), createUser.handle);
 Router.put('/v1/users/:id', updatedUser.handle);
 Router.delete('/v1/users/:id', deletedUser.handle);
 Router.get('/v1/users', getlAllUser.handle);
-Router.get('/v1/users/:user_id', getOneUser.handle);
+Router.get('/v1/users/one/:user_id', getOneUser.handle);
 
 export { Router };
