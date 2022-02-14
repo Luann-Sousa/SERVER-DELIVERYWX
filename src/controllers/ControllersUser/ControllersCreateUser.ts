@@ -10,7 +10,6 @@ class UserCreateControler {
       password,
       cpf,
       phone,
-
       nivel_user,
       date_nasc,
     } = request.body;
