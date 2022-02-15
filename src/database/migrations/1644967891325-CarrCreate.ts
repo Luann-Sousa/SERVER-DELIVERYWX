@@ -4,7 +4,7 @@ export class CarrCreate1644967891325 implements MigrationInterface {
   public async up(queryRunner: QueryRunner): Promise<void> {
     return queryRunner.createTable(
       new Table({
-        name: 'carr',
+        name: 'carrs',
 
         columns: [
           {
@@ -54,5 +54,7 @@ export class CarrCreate1644967891325 implements MigrationInterface {
     );
   }
 
-  public async down(queryRunner: QueryRunner): Promise<void> {}
+  public async down(queryRunner: QueryRunner): Promise<void> {
+    return queryRunner.dropTable('carrs');
+  }
 }
