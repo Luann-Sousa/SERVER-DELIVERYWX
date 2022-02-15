@@ -1,4 +1,6 @@
 import express from 'express';
+import multer from 'multer';
+import createMulter from '../../utils/upload';
 
 import { ControllersCreateProduct } from '../../controllers/ControllersProduct/ControllersCreateProduct';
 import { ControllersGetAllProduct } from '../../controllers/ControllersProduct/ControllersGetAllProduct';
@@ -14,7 +16,9 @@ const deletedProduct = new ControllersDeletdProduct(); //excluindo um produto ca
 
 const RouterProduct = express.Router();
 
-RouterProduct.post('/v1/products', createProduct.handle);
+const upload = multer(createMulter); //intanciado o multer
+
+RouterProduct.post('/v1/products', upload.single('file'), createProduct.handle);
 RouterProduct.get('/v1/products', getAllProduct.handle);
 RouterProduct.get('/v1/products/one', getOneUserProduct.handle);
 RouterProduct.put('/v1/products/updated/:id', updatedProduct.handle);

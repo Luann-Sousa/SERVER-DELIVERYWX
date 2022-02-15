@@ -4,6 +4,7 @@ import { RepositoriesProduct } from '../../repositories/RepositorieProduct';
 //tipagem
 export interface IProductProps {
   name?: string;
+  file: string;
   categories?: string;
   description?: string;
   price?: number;
@@ -17,6 +18,7 @@ export interface IProductProps {
 class ServiceProductCreate {
   async execute({
     name,
+    file,
     categories,
     description,
     price,
@@ -30,6 +32,7 @@ class ServiceProductCreate {
 
     const productCreate = productService.create({
       name,
+      file,
       categories,
       description,
       price,

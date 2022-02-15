@@ -14,10 +14,12 @@ class ControllersCreateProduct {
       assessment,
       user_id,
     } = request.body;
+    const { filename: file } = request.file;
     const controllersProduct = new ServiceProductCreate();
 
     const result = await controllersProduct.execute({
       name,
+      file,
       categories,
       description,
       price,

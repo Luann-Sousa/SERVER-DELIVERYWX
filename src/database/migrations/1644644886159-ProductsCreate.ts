@@ -17,6 +17,10 @@ export class ProductsCreate1644644886159 implements MigrationInterface {
             type: 'varchar',
           },
           {
+            name: 'file',
+            type: 'varchar',
+          },
+          {
             name: 'categories',
             type: 'varchar',
           },

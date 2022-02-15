@@ -19,6 +19,9 @@ class Products {
   name: string;
 
   @Column()
+  file: string;
+
+  @Column()
   categories: string;
 
   @Column()
