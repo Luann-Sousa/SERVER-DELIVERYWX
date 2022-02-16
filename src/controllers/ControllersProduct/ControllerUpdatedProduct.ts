@@ -4,7 +4,7 @@ import { ServicesUpdatedProduct } from '../../services/ServicesProducts/Services
 class ControllerUpdatedProduct {
   async handle(request: Request, response: Response) {
     const { id } = request.params;
-    const { name, description, price, quantity, user_id } = request.body;
+    const { name, description, price, stock, user_id } = request.body;
 
     const userService = new ServicesUpdatedProduct();
 
@@ -13,7 +13,7 @@ class ControllerUpdatedProduct {
       name,
       description,
       price,
-      quantity,
+      stock,
       user_id,
     });
     if (result instanceof Error) {

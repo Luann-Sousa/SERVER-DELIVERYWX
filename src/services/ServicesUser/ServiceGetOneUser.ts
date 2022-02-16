@@ -9,7 +9,7 @@ class GetOneUserService {
 
     if (!resultUser) {
       throw new Error(
-        'Não exite esse usuário em nosso sistema tente mais tarde !',
+        'Não exite esse usuário em nosso sistema tente mais tarde ou solicite Adm !',
       );
     }
 

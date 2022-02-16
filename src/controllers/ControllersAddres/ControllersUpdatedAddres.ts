@@ -38,7 +38,7 @@ class UpdateUserController {
 
     return response.status(200).json({
       status: 200,
-      messeger: 'Usuário foi atualizada com sucesso!',
+      messeger: 'Endereço foi atualizada com sucesso!',
       addres: result,
     });
   }

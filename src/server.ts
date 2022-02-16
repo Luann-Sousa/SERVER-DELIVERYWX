@@ -8,7 +8,8 @@ import {
   MainRouterCard,
   MainRouterProduct,
   MainRouterPayment,
-  MainRouteCompany,
+  MainRouterCompany,
+  MainRouterCarr,
 } from './routes';
 
 const app = express();
@@ -22,7 +23,8 @@ app.use(
   MainRouterCard,
   MainRouterProduct,
   MainRouterPayment,
-  MainRouteCompany,
+  MainRouterCompany,
+  MainRouterCarr,
 );
 
 // funtion capturando os erros da aplicação.
