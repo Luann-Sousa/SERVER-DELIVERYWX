@@ -14,6 +14,6 @@ const RouterCarr = express.Router();
 RouterCarr.post('/v1/carrs', createCarr.handle);
 RouterCarr.get('/v1/carrs', getAtAllCarr.handle);
 RouterCarr.put('/v1/carrs/updated/:id', updatedCarr.handle);
-RouterCarr.put('/v1/carrs/deleted/:id_carr', deletedCarr.handle);
+RouterCarr.delete('/v1/carrs/deleted/:id_carr', deletedCarr.handle);
 
 export { RouterCarr };
