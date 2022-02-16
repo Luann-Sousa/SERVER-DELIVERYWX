@@ -1,14 +1,20 @@
 import { Request, Response } from 'express';
-import { ServicesDeletedCarr } from '../../services/ServiceCarr/ServicesDeletedCarr';
+import { ServicesUpdatedCarr } from '../../services/ServiceCarr/ServicesUpdatedCarr';
 
 class ControllersUpdatedCarr {
   async handle(request: Request, response: Response) {
-    const { id_carr } = request.params;
+    const { id } = request.params;
+    const { quantity, resumo, toti, user_id, product_id } = request.body;
 
-    const carrService = new ServicesDeletedCarr();
+    const userService = new ServicesUpdatedCarr();
 
-    const result = await carrService.execute({
-      id_carr,
+    const result = await userService.execute({
+      id,
+      quantity,
+      resumo,
+      toti,
+      user_id,
+      product_id,
     });
     if (result instanceof Error) {
       return response.json(result.message);
