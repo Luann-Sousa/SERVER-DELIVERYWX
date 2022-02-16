@@ -5,6 +5,6 @@ const createCarr = new ControllersCreateCarr(); //criação de um carrinho de co
 
 const RouterCarr = express.Router();
 
-RouterCarr.post('/v1/carr', createCarr.handle);
+RouterCarr.post('/v1/carrs', createCarr.handle);
 
 export { RouterCarr };
