@@ -21,9 +21,6 @@ class Carr {
   @Column()
   user_id: string;
 
-  @Column()
-  product_id: string;
-
   @ManyToMany(() => User, {
     cascade: true,
     onDelete: 'CASCADE',
@@ -31,6 +28,9 @@ class Carr {
   })
   @JoinTable()
   user: User[];
+
+  @Column()
+  product_id: string;
 
   @ManyToMany(() => Products, {
     cascade: true,
