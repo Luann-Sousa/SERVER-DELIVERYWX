@@ -34,7 +34,9 @@ class ServiceUpdatedAddres {
     const user = await userRepository.findOne(id);
 
     if (!user) {
-      return new Error('Não possui esse usário em nosso sitema tente outro !');
+      return new Error(
+        'O endreço que você tentou ataulizar e inválido tente outro ou solicite Adm!',
+      );
     }
 
     user.uf = uf ? uf : user.uf;
