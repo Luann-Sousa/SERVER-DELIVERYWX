@@ -3,11 +3,14 @@ import { ServicesCreateCarr } from '../../services/ServiceCarr/ServicesCreateCar
 
 class ControllersCreateCarr {
   async handle(request: Request, response: Response) {
-    const { user_id, product_id } = request.body;
+    const { quantity, resumo, toti, user_id, product_id } = request.body;
 
     const createCarr = new ServicesCreateCarr();
 
     const result = await createCarr.execute({
+      quantity,
+      resumo,
+      toti,
       user_id,
       product_id,
     });

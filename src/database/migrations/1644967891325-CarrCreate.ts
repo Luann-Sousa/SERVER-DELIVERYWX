@@ -22,6 +22,19 @@ export class CarrCreate1644967891325 implements MigrationInterface {
             type: 'uuid',
           },
           {
+            name: 'quantity',
+            type: 'numeric',
+          },
+          {
+            name: 'resumo',
+            type: 'numeric',
+          },
+          {
+            name: 'toti',
+            type: 'numeric',
+          },
+
+          {
             name: 'created_at',
             type: 'timestap',
             default: 'now()',

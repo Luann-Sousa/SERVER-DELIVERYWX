@@ -3,11 +3,9 @@ import { Carr } from '../../entities/Carr';
 
 class ServicesGetAllCarr {
   async execute() {
-    const carrRepositorie = getRepository(Carr);
+    const carrRepository = getRepository(Carr);
 
-    const carrs = await carrRepositorie.find({
-      relations: ['user', 'product'],
-    });
+    const carrs = await carrRepository.find();
 
     return carrs;
   }

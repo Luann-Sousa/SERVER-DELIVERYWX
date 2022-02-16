@@ -19,26 +19,29 @@ class Carr {
   id: string;
 
   @Column()
-  user_id: string;
+  quantity: number;
 
-  @ManyToMany(() => User, {
-    cascade: true,
-    onDelete: 'CASCADE',
-    onUpdate: 'CASCADE',
-  })
-  @JoinTable()
-  user: User[];
+  @Column()
+  resumo: number;
+
+  @Column()
+  toti: number;
+
+  @Column()
+  user_id: string;
+  @ManyToOne(() => User)
+  @JoinColumn({ name: 'user_id' })
+  user: User;
 
   @Column()
   product_id: string;
-
-  @ManyToMany(() => Products, {
+  @ManyToOne(() => Products, {
     cascade: true,
     onDelete: 'CASCADE',
     onUpdate: 'CASCADE',
   })
-  @JoinTable()
-  product: Products[];
+  @JoinColumn({ name: 'product_id' }) ///qual coluna dentro da minha tabela de videos que tou referenciando
+  product: Products;
 
   @CreateDateColumn()
   created_at: Date;
