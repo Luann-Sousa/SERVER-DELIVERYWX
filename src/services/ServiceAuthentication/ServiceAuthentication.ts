@@ -3,6 +3,8 @@ interface UserAuth {
   email: string;
   password: string;
 }
-class ServiceAuthentication {}
+class ServiceAuthentication {
+  async execute({ username, email, password }: UserAuth) {}
+}
 
 export { ServiceAuthentication };
